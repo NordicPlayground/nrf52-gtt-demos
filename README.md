@@ -4,9 +4,8 @@ This repository contains the demos run at the nRF52 Global Tech Tour (GTT) in 20
 
 The code may have been changed compared to the one presented at the GTT, to improve readability and/or performance. 
 
-Not included (but coming soon):
-- NFC demos
-- GAPP/GATT demo with Android applications
+Not included:
+- NFC app launcher demo
 
 Requirements
 ------------
