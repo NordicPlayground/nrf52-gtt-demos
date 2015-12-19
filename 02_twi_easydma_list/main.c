@@ -226,9 +226,9 @@ int main(void)
     SCB->SCR |= SCB_SCR_SEVONPEND_Msk;    
     while(1)
     {
-        __sev();
-        __wfe();
-        __wfe();
+        __SEV();
+        __WFE();
+        __WFE();
         nrf_gpio_pin_toggle(18);
     }       
 }
