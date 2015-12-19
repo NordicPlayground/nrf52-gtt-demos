@@ -39,16 +39,7 @@ remduplicates = $(strip $(if $1,$(firstword $1) $(call remduplicates,$(filter-ou
 C_SOURCE_FILES += \
 ../../../../../components/toolchain/system_nrf52.c \
 ../../main.c \
-../../../../../components/libraries/util/app_error.c \
-../../../../../components/libraries/pwm/app_pwm.c \
-../../../../../components/libraries/util/app_util_platform.c \
-../../../../../components/libraries/util/nrf_assert.c \
 ../../../../../components/drivers_nrf/delay/nrf_delay.c \
-../../../../../components/drivers_nrf/common/nrf_drv_common.c \
-../../../../../components/drivers_nrf/gpiote/nrf_drv_gpiote.c \
-../../../../../components/drivers_nrf/ppi/nrf_drv_ppi.c \
-../../../../../components/drivers_nrf/timer/nrf_drv_timer.c \
-../../../../../components/drivers_nrf/nrf_soc_nosd/nrf_soc.c \
 
 #assembly files common to all targets
 ASM_SOURCE_FILES  = ../../../../../components/toolchain/gcc/gcc_startup_nrf52.s
@@ -57,19 +48,15 @@ ASM_SOURCE_FILES  = ../../../../../components/toolchain/gcc/gcc_startup_nrf52.s
 INC_PATHS  = -I../../config/pwm_pca10036
 INC_PATHS += -I../../config
 INC_PATHS += -I../../../../bsp
-INC_PATHS += -I../../../../../components/drivers_nrf/ppi
 INC_PATHS += -I../../../../../components/drivers_nrf/nrf_soc_nosd
 INC_PATHS += -I../../../../../components/device
 INC_PATHS += -I../../../../../components/drivers_nrf/hal
-INC_PATHS += -I../../../../../components/drivers_nrf/timer
 INC_PATHS += -I../../../../../components/drivers_nrf/delay
 INC_PATHS += -I../..
 INC_PATHS += -I../../../../../components/libraries/util
 INC_PATHS += -I../../../../../components/drivers_nrf/common
 INC_PATHS += -I../../../../../components/toolchain
 INC_PATHS += -I../../../../../components/drivers_nrf/config
-INC_PATHS += -I../../../../../components/libraries/pwm
-INC_PATHS += -I../../../../../components/drivers_nrf/gpiote
 INC_PATHS += -I../../../../../components/toolchain/gcc
 
 OBJECT_DIRECTORY = _build
